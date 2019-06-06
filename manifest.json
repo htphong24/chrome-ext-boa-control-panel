@@ -1,0 +1,28 @@
+{
+    // Extension ID: kobhnjaailplkhikcgljikmfikkmogke
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4He7k1oHDtdnozKMAx+OeqSscUFXjVX445HCnQHz9XhnwDbmLSAFW15zjdLfYu0ZeOn2NI3aM78oyYynppq3isjvWDkOzzRW94BR2uexYMnpwLhAnrzJl+zPqlyI53DlNKRLL8XTjVk4fmi2H4N13CMK72NEiE2boJ05ORV68e7njSR1ddk0yrRu5ApMt3IlIr5cU2Dgo/3w3aL4BXKpCnpjAFLkT3M7Anb3jNUTZMUmFRGMwvfNJCyIs6Sud53rfDahXUbfN00F9P2/LLRQj60UCqPoQZ1sXpIire5YiZxU2diCxK8DNGq/dwow0B5UZDfgAs8gxLv8/+cC7ieKWQIDAQAB",
+    "manifest_version": 2,
+    "name": "BOA SSMS",
+    "description": "This extension lets you access BOA DB",
+    "version": "1.0",
+    "homepage_url": "https://bitbucket.com/htphong24",
+    "browser_action": {
+        "default_icon": "p_icon.png",
+        "default_popup": "popup.html",
+        "default_title": "BOA SSMS"
+    },
+    "background": {
+      "scripts": ["scripts/background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js":      ["scripts/jquery-3.4.0.js", "scripts/content.js"]
+    }],
+    "permissions": [
+        "activeTab",
+        "nativeMessaging"
+    ],
+    "web_accessible_resources": ["inject.html"],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+}
