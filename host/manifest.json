@@ -1,0 +1,9 @@
+{
+  "name": "boa_ssms",
+  "description": "Open SSMS with BOA login info",
+  "path": "boa-control-panel-extension-console-app.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://kobhnjaailplkhikcgljikmfikkmogke/"
+  ]
+}
