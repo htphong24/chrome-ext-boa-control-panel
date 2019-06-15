@@ -5,7 +5,7 @@
     "name": "BOA SSMS",
     "description": "This extension lets you access BOA DB",
     "version": "1.0",
-    "homepage_url": "https://bitbucket.com/htphong24",
+    "homepage_url": "https://github.com/htphong24",
     "browser_action": {
         "default_icon": "p_icon.png",
         "default_popup": "popup.html",
