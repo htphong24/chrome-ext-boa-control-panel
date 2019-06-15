@@ -34,6 +34,11 @@ All buttons' name are self-explanatory.
 
     + Run `host/install_host.bat` to install native messaging app
 
+4. **Install chrome extension**
+
+    + Enable Developer mode (More tools > Extensions > Developer mode)
+    + Load the unpacked folder (chrome-ext-boa-control-panel)
+
 ## Notes
 
 + The extension currently uses fixed ID (`kobhnjaailplkhikcgljikmfikkmogke`) to make the installation easier.
