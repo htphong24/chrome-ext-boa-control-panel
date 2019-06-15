@@ -8,8 +8,8 @@ $.ajax({
   success: function(data) {
     $(".form-group:last-child").before(data);
     
-    //var url = window.location.href;
-    var url = "https://rc-control-panel.insightbroking.com.au/Ledgers/Details/373"; // TESTING
+    var url = window.location.href;
+    //var url = "https://rc-control-panel.insightbroking.com.au/Ledgers/Details/373"; // TESTING
 
     // div-access-ledger-support
     if (!url.includes("/Ledgers/CreateReadOnlyDbUser/")) {
@@ -64,10 +64,10 @@ function sendData() {
   var regex; // regular expression pattern
   
   // get control panel (e.g. rc/sandpit/prodau...)
-  //var url = window.location.href;
+  var url = window.location.href;
   // sample 1: https://rc-control-panel.insightbroking.com.au/Ledgers/Details/373
   // sample 2: https://rc-control-panel.insightbroking.com.au/Ledgers/CreateReadOnlyDbUser/373
-  var url = "https://rc-control-panel.insightbroking.com.au/Ledgers/Details/373"; // TESTING
+  //var url = "https://rc-control-panel.insightbroking.com.au/Ledgers/Details/373"; // TESTING
   regex = /(?<=https:\/\/).+(?=(-control-panel))/g; // get the string after "https://" and before "-control-panel"
   var controlPanel = url.match(regex); // should be "xxxx"
   
@@ -83,10 +83,13 @@ function sendData() {
 
   // get server name
   var serverName = url.includes("/Ledgers/CreateReadOnlyDbUser/") ? $("#DatabaseServer").val() : "";
+
   // get database name
   var dbName = url.includes("/Ledgers/CreateReadOnlyDbUser/") ? $("#DatabaseName").val() : "";
+
   // get username
   var username = url.includes("/Ledgers/CreateReadOnlyDbUser/") ? $("#Username").val() : "";
+  
   // get password
   var password = url.includes("/Ledgers/CreateReadOnlyDbUser/") ? $("#Password").val() : "";
 
