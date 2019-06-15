@@ -13,7 +13,7 @@ In addition to those buttons, the extension popup page also has 2 other buttons 
 + Access RC Control Panel DB
 + Access SANDPIT Control Panel DB
 
-![App Screenshot](screenshot2.png)
+![App Screenshot](screenshot2.jpg)
 
 All buttons' name are self-explanatory.
 
